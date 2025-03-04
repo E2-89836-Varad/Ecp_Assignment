@@ -2,30 +2,18 @@
 
 int main()
 {
-	int num1,num2;
-	printf("Enter 2 Numbers:\n");
-	//scanf("%d%d",&num1,&num2);
-	scanf("%d",&num1);
-	scanf("%d",&num2);
-	int result=1;
-	int temp;
-	//while(num1%num2!=0)
+int num1,num2,rem;
+printf("Enter 2 number\n");
+scanf("%d%d",&num1,&num2);
+int n1=num1,n2=num2;
 
-	//result=num1%num2;
-	if(num2>num1)
-	{
-		while(result != 0)
-		{
-			result=num2 % num1;
-			temp=result;
-			result=num1 % temp;
-		}
-	}
-	//else
-	//	result=num1 % num2;
-
-
-	printf("Result=%d",temp);
-
+while(num1%num2 !=0)
+{
+rem=num1%num2;
+printf("%d %% %d= %d\n",num1,num2,rem);
+num1=num2;
+num2=rem;
+}
+printf("GCD of %d and %d is %d\n",n1,n2,rem);
 	return 0;
 }
